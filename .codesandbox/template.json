@@ -1,0 +1,7 @@
+{
+  "title": "Maru Social",
+  "description": "Social platform for artists to share their work in progress",
+  "iconUrl": "",
+  "tags": ["react", "typescript", "vite", "express"],
+  "published": false
+} 

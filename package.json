@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tsx watch server/index.ts",
+    "dev": "node server/index.js",
     "build": "tsc",
     "start": "node dist/server/index.js",
     "db:push": "drizzle-kit push:pg",
     "db:studio": "drizzle-kit studio",
     "lint": "eslint . --ext .ts,.tsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
   },
   "workspaces": [
     "client",
