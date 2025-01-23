@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node server/index.js",
+    "dev": "tsx watch server/index.ts",
     "build": "tsc",
     "start": "node dist/server/index.js",
     "db:push": "drizzle-kit push:pg",
@@ -16,5 +16,8 @@
     "client",
     "server",
     "shared"
-  ]
+  ],
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
 }
