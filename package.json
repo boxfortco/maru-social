@@ -10,7 +10,8 @@
     "db:studio": "drizzle-kit studio",
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write .",
-    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "postinstall": "npm install -D tsx"
   },
   "workspaces": [
     "client",

@@ -39,6 +39,11 @@ app.use((req, res, next) => {
   next();
 });
 
+// Basic health check endpoint
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
 (async () => {
   try {
     const server = registerRoutes(app);
@@ -56,9 +61,9 @@ app.use((req, res, next) => {
       serveStatic(app);
     }
 
-    const PORT = 5000;
+    const PORT = process.env.PORT || 5000;
     server.listen(PORT, "0.0.0.0", () => {
-      log(`serving on port ${PORT}`);
+      log(`Server running on port ${PORT}`);
     });
   } catch (error) {
     console.error('Server startup error:', error);
